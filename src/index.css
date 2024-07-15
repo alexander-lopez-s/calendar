@@ -1,13 +1,58 @@
-body {
+body, html {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8ff;
+  color: #2c3e50;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.month-container {
+  text-align: center;
+  font-size: 5vw;
+  color: #2980b9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.month-container div:first-child {
+  font-size: 4vw;
+  color: #16a085;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .month-container {
+      font-size: 8vw;
+  }
+
+  .month-container div:first-child {
+      font-size: 6vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .month-container {
+      font-size: 10vw;
+  }
+
+  .month-container div:first-child {
+      font-size: 8vw;
+  }
 }
